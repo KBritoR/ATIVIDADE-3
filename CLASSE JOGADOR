@@ -1,0 +1,49 @@
+public class JOGADOR {
+
+    private int energia, vida;
+
+    private ARMA armas;
+
+
+    public void setEnergia(int energia) {
+        this.energia = energia;
+    }
+
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
+    public void setArmas(ARMA armas) {
+        this.armas = armas;
+    }
+
+    public  JOGADOR(int energia, int vida, ARMA armas) {//construtor cria o personagem e da os atributos pra ele.
+        this.energia = energia;
+        this.vida = vida;
+        this.armas = armas;
+    }
+
+    public JOGADOR(){
+
+    }
+
+    public void atacar (JOGADOR alvo)//trabalhando com dois objetos diferentes, o jogador e o alvo.
+    {
+
+        if(this.energia < this.armas.getCustodeEnergia())//this estamos falando do jogador que está atacando
+        {
+            System.out.println("Não tem energia suficiente");
+        }
+        else
+        {
+            alvo.vida = alvo.vida - this.armas.getDano();// alvo e o joagador que está recebendo o dano.
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        return  "A Vida do jogador é " + this.vida;
+    }
+
+}
