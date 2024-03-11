@@ -1,0 +1,77 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner escrever = new Scanner(System.in);
+        JOGADOR jogador1 = new JOGADOR();
+        JOGADOR jogador2 = new JOGADOR();
+        int escolheArma = 0;
+
+
+        System.out.println("Entre com a vida do jogador1");
+        jogador1.setVida(escrever.nextInt());
+        System.out.println("Entre com a energia do jogador1");
+        jogador1.setEnergia(escrever.nextInt());
+
+
+        System.out.println("Escolha a arma do jogador1");
+        System.out.println("1 Para Fuzil 762");
+        System.out.println("2 Para Parafal");
+        System.out.println("3 Para AK-47");
+        escolheArma = escrever.nextInt();
+
+        if(escolheArma == 1)
+        {
+            ARMA arma1 = new ARMA(410, 30);
+            jogador1.setArmas(arma1);
+        }
+        if(escolheArma == 2)
+        {
+            ARMA arma2 = new ARMA(300, 60);
+            jogador1.setArmas(arma2);
+        }
+        if(escolheArma == 3)
+        {
+            ARMA arma3 = new ARMA(750, 100);
+            jogador1.setArmas(arma3);
+        }
+
+        System.out.println("Entre com a vida do jogador1");
+        jogador2.setVida(escrever.nextInt());
+        System.out.println("Entre com a energia do jogador1");
+        jogador2.setEnergia(escrever.nextInt());
+
+
+        System.out.println("Escolha a arma do jogador1");
+        System.out.println("1 Para Fuzil 762");
+        System.out.println("2 Para Parafal");
+        System.out.println("3 Para AK-47");
+        escolheArma = escrever.nextInt();
+
+        if(escolheArma == 1)
+        {
+            ARMA arma1 = new ARMA(410, 30);
+            jogador2.setArmas(arma1);
+        }
+        if(escolheArma == 2)
+        {
+            ARMA arma2 = new ARMA(300, 60);
+            jogador2.setArmas(arma2);
+        }
+        if(escolheArma == 3)
+        {
+            ARMA arma3 = new ARMA(750, 100);
+            jogador2.setArmas(arma3);
+        }
+
+        jogador1.atacar(jogador2);
+
+        System.out.println(jogador2);
+
+
+
+
+
+
+    }
+}
