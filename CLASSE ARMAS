@@ -1,0 +1,24 @@
+public class ARMA {
+
+
+    private int dano, custodeEnergia;
+
+
+    public int getDano() {
+        return dano;
+    }
+
+    public int getCustodeEnergia() {
+        return custodeEnergia;
+    }
+
+    public ARMA(int dano, int custodeEnergia)
+    {
+        this.dano = dano;
+        this.custodeEnergia = custodeEnergia;
+    }
+
+
+
+
+}
