@@ -1,0 +1,67 @@
+package EXERCICO3PO;
+
+public class CLIENTE {
+
+    private String nome, cpf;
+    CONTA conta;
+
+
+    public CLIENTE(String nome,String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.conta = new CONTA();
+    }
+
+    public boolean sacarDinheiro(double valor) {
+            if(conta.getSaldo() >= valor)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+    }
+
+    public void depositarDinheiro(double valor) {
+
+        conta.setSaldo(valor);
+
+    }
+
+    public boolean comprarComCredito(double valor) {
+        if(conta.getSaldo() > valor && conta.getLimite() >= valor)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+    public boolean transferir(double valor) {
+        if(conta.getSaldo() > valor )
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+    public void Cliente(String nome, String cpf, double saldo, double limite)// não entendi qual a necessidade desse metodo.
+    {
+
+
+    }
+
+
+
+
+
+
+}
