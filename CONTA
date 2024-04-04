@@ -1,0 +1,38 @@
+package EXERCICO3PO;
+
+public class CONTA {
+
+
+
+    private double saldo, limite;
+
+    public CONTA() {
+        this.saldo = saldo;
+        this.limite = limite;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public double getLimite() {
+        return limite;
+    }
+
+    public void setLimite(double saldo) {
+        this.limite = saldo;
+    }
+
+    public void conta(double saldo, double limite)
+    {
+
+
+
+    }
+
+
+}
