@@ -1,0 +1,73 @@
+package EXERCICO3PO;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        CLIENTE cliente = new CLIENTE("kawan","162.187.786.81");
+        CONTA conta = new CONTA();
+        cliente.conta.setSaldo(1000);
+        cliente.conta.setLimite(500);
+
+        Scanner escrever = new Scanner(System.in);
+
+        cliente.Cliente("kawan","16262625252",5000,1000);
+
+
+        System.out.println("Ola Kawan oque irei mostrar as opções abaixo");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println("1- Sacar");
+        System.out.println("2- Tranferir");
+        System.out.println("3- Compra no credito");
+        int opcao = escrever.nextInt();
+
+        if(opcao == 1)
+        {
+            System.out.println("Insira o valor que deseja sacar: ");
+            double valor = escrever.nextInt();
+            if(cliente.sacarDinheiro(valor) == true)
+            {
+                System.out.println("valor sacado com sucesso ");
+            }
+            else
+            {
+                System.out.println("Saldo insuficiente");
+            }
+        }
+
+        if(opcao == 2)
+        {
+            System.out.println("Insira o valor que deseja Transferir: ");
+            double valor = escrever.nextInt();
+            if(cliente.transferir(valor) == true)
+            {
+                System.out.println("valor tranferido com sucesso ");
+            }
+            else
+            {
+                System.out.println("Saldo insuficiente");
+            }
+        }
+
+        if(opcao == 3)
+        {
+            System.out.println("Insira o valor que deseja comprar: ");
+            double valor = escrever.nextInt();
+            if(cliente.comprarComCredito(600) == true)
+            {
+                System.out.println("compra realizada com sucesso ");
+            }
+            else
+            {
+                System.out.println("limite insuficiente");
+            }
+        }
+
+
+    }
+
+}
